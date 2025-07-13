@@ -5,23 +5,27 @@ on:
     - cron: '0 0 * * *'  # Executa todo dia à meia-noite UTC
   workflow_dispatch:      # Permite execução manual
 
+permissions:
+  contents: write  # Permite escrever no repositório
+
 jobs:
   update:
     runs-on: ubuntu-latest
-
     steps:
       - name: Checkout do repositório
         uses: actions/checkout@v4
-
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+      
       - name: Configurar Python
         uses: actions/setup-python@v5
         with:
           python-version: '3.x'
-
+      
       - name: Instalar dependências
         run: |
           pip install requests lxml python-dateutil
-
+      
       - name: Rodar o script
         env:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
@@ -29,7 +33,7 @@ jobs:
         run: |
           mkdir -p cache
           python today.py
-
+      
       - name: Commit e push
         run: |
           git config user.name "github-actions[bot]"
