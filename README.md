@@ -1,22 +1,24 @@
 ```text
 ╭─ArtFaz@github:~$ ./whoami --verbose──────────────────────────────────────────────────╮
 │                                                                                      │
-│  # USER PROFILE LOADED ------------------------------------------------------------  │
-│    NAME:    ArtFaz                                                                   │
-│    ROLE:    Backend Developer | Data Engineer | Computer Scientist                   │
-│    DEGREE:  B.Sc. Computer Science @ UNISAGRADO                                      │
-│    WORK:    Systems Analyst @ Ultra Displays                                         │
-│  ----------------------------------------------------------------------------------  │
-│                                                                                      │
-│  > Reading bio.txt...                                                                │
-│                                                                                      │
-│  "I am a Computer Science graduate currently working as a Systems Analyst.           │
-│  My background spans from IT infrastructure to software development, which           │
-│  taught me that code needs to be reliable, not just fancy.                           │
-│                                                                                      │
-│  I focus on building practical, scalable systems. Whether I'm architecting           │
-│  data pipelines on AWS, writing performance-critical code in Python/Rust,            │
-│  or working with Computer Vision, I prioritize efficiency and maintainability."      │
+│ +88                 +880         # USER PROFILE LOADED ----------------------------  │
+│  +880               ++80           NAME:    ArtFaz                                   │
+│  ++88              +880            ROLE:    Backend Dev | Data Eng | Comp Sci        │
+│  ++88             ++88             DEGREE:  B.Sc. Computer Science @ UNISAGRADO      │
+│   +880           ++88              WORK:    Systems Analyst @ Ultra Displays         │
+│   +888         ++880             --------------------------------------------------  │
+│   ++880       ++880                                                                  │
+│   ++888     +++880               > Reading bio.txt...                                │
+│   ++8888  +++8880++88                                                                │
+│   +++8888+++8880++8888           "I am a Computer Science graduate currently         │
+│    ++888++8888+++888888+80        working as a Systems Analyst. My background        │
+│    ++88++8888++8888888++888       spans from IT infrastructure to software dev,      │
+│    ++++++888888fx88888888888      which taught me that code needs to be reliable.    │
+│     ++++++88888888888888888                                                          │
+│     ++++++++000888888888888       I focus on building practical, scalable systems.   │
+│      +++++++00008f8888888888      Whether I'm architecting data pipelines on AWS,    │
+│       +++++++00088888888888       writing performance-critical code in Python/Rust,  │
+│        +++++++0888f8888888        or working with CV, I prioritize efficiency."      │
 │                                                                                      │
 ╰──────────────────────────────────────────────────────────────────────────────────────╯
 ```
