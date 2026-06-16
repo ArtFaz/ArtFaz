@@ -3,9 +3,9 @@
 │                                                                                      │
 │ +88                 +880         # USER PROFILE LOADED ----------------------------  │
 │  +880               ++80           NAME:    ArtFaz                                   │
-│  ++88              +880            ROLE:    Backend Dev | Data Eng | Comp Sci        │
+│  ++88              +880            ROLE:    Full Stack Dev | Data Eng | Comp Sci     │
 │  ++88             ++88             DEGREE:  B.Sc. Computer Science @ UNISAGRADO      │
-│   +880           ++88              WORK:    Systems Analyst @ Ultra Displays         │
+│   +880           ++88              WORK:    Full Stack Dev @ NextSI                  │
 │   +888         ++880             --------------------------------------------------  │
 │   ++880       ++880                                                                  │
 │   ++888     +++880               > Reading bio.txt...                                │
