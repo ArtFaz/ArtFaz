@@ -1,6 +1,7 @@
 /*
-  Gera os SVGs do README: a janela do terminal (assets/whoami.svg) e os cartões dos projetos
-  (assets/card-*.svg). Rodar com `node scripts/build.mjs`, sem dependências.
+  Gera os SVGs do README: a janela do terminal (assets/whoami.svg), os botões do rodapé
+  (assets/link-*.svg) e, com --cards, os cartões dos projetos (assets/card-*.svg).
+  Rodar com `node scripts/build.mjs`, sem dependências.
 
   A identidade é a do site pessoal: paleta de src/lib/styles/tokens.css, a arte se formando a
   partir do ruído e o texto digitado, como o cartão do curl (src/lib/terminal/cartao.js).
@@ -309,9 +310,45 @@ ${body}
 `;
 }
 
+/* ---------- os botões do rodapé ---------- */
+
+const LINKS = [
+  { slug: 'linkedin', text: 'linkedin.com/in/arthurfazioni', label: 'LinkedIn' },
+  { slug: 'repaginata', text: 'repaginata.com.br', label: 'Repaginata, my web studio' },
+];
+
+/** Um botão no estilo do terminal: "> endereço" numa janelinha com a mesma moldura. */
+function link(l) {
+  const fs = 13;
+  const adv = fs * ADV;
+  const padX = 18;
+  const h = 44;
+  // Largura num número inteiro de 1% da janela (820 px): no README os botões levam width em %,
+  // e assim os dois ficam com a mesma altura em qualquer tela.
+  const step = 8.2;
+  const w = r2(Math.ceil((padX * 2 + (l.text.length + 2) * adv) / step) * step);
+  return `<svg xmlns="http://www.w3.org/2000/svg" width="${w}" height="${h}" viewBox="0 0 ${w} ${h}" role="img" aria-labelledby="t">
+<title id="t">${esc(l.label)}: ${esc(l.text)}</title>
+${style({ fs })}
+<rect x="0.5" y="0.5" width="${w - 1}" height="${h - 1}" rx="10" fill="${C.bg}" stroke="${C.line}"/>
+<text x="${r2(w / 2)}" y="${h / 2 + 4.5}" text-anchor="middle">${spans([
+    [C.accent, '> '],
+    [C.ink2, l.text],
+  ])}</text>
+</svg>
+`;
+}
+
+// Os cartões dos projetos saíram do README (os repositórios fixados já fazem a vitrine).
+// Para gerá-los de novo: node scripts/build.mjs --cards
 mkdirSync(join(ROOT, 'assets'), { recursive: true });
-const outputs = [['whoami.svg', whoami()], ...CARDS.map((c) => [`card-${c.slug}.svg`, card(c)])];
+const outputs = [
+  ['whoami.svg', whoami()],
+  ...LINKS.map((l) => [`link-${l.slug}.svg`, link(l)]),
+  ...(process.argv.includes('--cards') ? CARDS.map((c) => [`card-${c.slug}.svg`, card(c)]) : []),
+];
 for (const [name, svg] of outputs) {
   writeFileSync(join(ROOT, 'assets', name), svg);
-  console.log(name, Math.round(svg.length / 1024), 'KB');
+  const width = Number(svg.match(/width="([\d.]+)"/)[1]);
+  console.log(name, Math.round(svg.length / 1024), 'KB', name.startsWith('link-') ? `${Math.round(width / 8.2)}% no README` : '');
 }
