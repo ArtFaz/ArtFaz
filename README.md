@@ -12,13 +12,13 @@
 │   ++8888  +++8880++88                                                                │
 │   +++8888+++8880++8888           "I build B2B products end to end: React and         │
 │    ++888++8888+++888888+80        TypeScript on the front, Node.js, PHP and SQL      │
-│    ++88++8888++8888888++888       on the back, Docker and Linux underneath.          │
-│    ++++++888888fx88888888888                                                         │
-│     ++++++88888888888888888       I started in IT infrastructure, so I care          │
-│     ++++++++000888888888888       about code that holds up in production:            │
-│      +++++++00008f8888888888      tested, simple to deploy, easy to maintain."       │
-│       +++++++00088888888888                                                          │
-│        +++++++0888f8888888       > Open to roles in Ireland & remote                 │
+│    ++88++8888++8888888++888       on the back, Docker and Linux underneath, from     │
+│    ++++++888888fx88888888888      the first sketch all the way to production.        │
+│     ++++++88888888888888888                                                          │
+│     ++++++++000888888888888       I started in IT infrastructure, which taught me    │
+│      +++++++00008f8888888888      that code has to hold up in production: tested,    │
+│       +++++++00088888888888       simple to deploy and easy to maintain. Open to     │
+│        +++++++0888f8888888        Software Engineer roles in Ireland and remote."    │
 │                                                                                      │
 ╰──────────────────────────────────────────────────────────────────────────────────────╯
 ```
