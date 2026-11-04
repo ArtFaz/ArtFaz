@@ -7,3 +7,7 @@
   &nbsp;
   <a href="https://repaginata.com.br"><img src="assets/link-repaginata.svg" width="26%" alt="Repaginata, my web studio: repaginata.com.br" /></a>
 </p>
+
+<p align="center">
+  <a href="https://github.com/ArtFaz/orbi"><img src="orbi/sky.gif" width="100%" alt="My GitHub contribution history drawn as a pixel-art night sky by Orbi: every day I contributed is a star, every streak a constellation" /></a>
+</p>
